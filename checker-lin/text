@@ -1,0 +1,133 @@
+gcc -E  src/test_util.c -MM -MT _build/test_util.o >_build/test_util.d
+gcc -E  src/hooks.c -MM -MT _build/hooks.o >_build/hooks.d
+gcc -E  src/test_perror_wait.c -MM -MT _build/test_perror_wait.o >_build/test_perror_wait.d
+gcc -E  src/test_perror_fork.c -MM -MT _build/test_perror_fork.o >_build/test_perror_fork.d
+gcc -E  src/test_fwrite_huge_random.c -MM -MT _build/test_fwrite_huge_random.o >_build/test_fwrite_huge_random.d
+gcc -E  src/test_fread_huge_random.c -MM -MT _build/test_fread_huge_random.o >_build/test_fread_huge_random.d
+gcc -E  src/test_ferror_fseek.c -MM -MT _build/test_ferror_fseek.o >_build/test_ferror_fseek.d
+gcc -E  src/test_ferror_fclose.c -MM -MT _build/test_ferror_fclose.o >_build/test_ferror_fclose.d
+gcc -E  src/test_popen_write.c -MM -MT _build/test_popen_write.o >_build/test_popen_write.d
+gcc -E  src/test_popen_read.c -MM -MT _build/test_popen_read.o >_build/test_popen_read.d
+gcc -E  src/test_ferror_write_large.c -MM -MT _build/test_ferror_write_large.o >_build/test_ferror_write_large.d
+gcc -E  src/test_ferror_write_small.c -MM -MT _build/test_ferror_write_small.o >_build/test_ferror_write_small.d
+gcc -E  src/test_ferror_read_large.c -MM -MT _build/test_ferror_read_large.o >_build/test_ferror_read_large.d
+gcc -E  src/test_ferror_read_small.c -MM -MT _build/test_ferror_read_small.o >_build/test_ferror_read_small.d
+gcc -E  src/test_append_read.c -MM -MT _build/test_append_read.o >_build/test_append_read.d
+gcc -E  src/test_append.c -MM -MT _build/test_append.o >_build/test_append.d
+gcc -E  src/test_feof_fread.c -MM -MT _build/test_feof_fread.o >_build/test_feof_fread.d
+gcc -E  src/test_feof_fgetc.c -MM -MT _build/test_feof_fgetc.o >_build/test_feof_fgetc.d
+gcc -E  src/test_fwrite_fread.c -MM -MT _build/test_fwrite_fread.o >_build/test_fwrite_fread.d
+gcc -E  src/test_fread_fwrite.c -MM -MT _build/test_fread_fwrite.o >_build/test_fread_fwrite.d
+gcc -E  src/test_fseek_fwrite.c -MM -MT _build/test_fseek_fwrite.o >_build/test_fseek_fwrite.d
+gcc -E  src/test_fseek_fread.c -MM -MT _build/test_fseek_fread.o >_build/test_fseek_fread.d
+gcc -E  src/test_fseek_ftell.c -MM -MT _build/test_fseek_ftell.o >_build/test_fseek_ftell.d
+gcc -E  src/test_fwrite_ftell.c -MM -MT _build/test_fwrite_ftell.o >_build/test_fwrite_ftell.d
+gcc -E  src/test_fread_ftell.c -MM -MT _build/test_fread_ftell.o >_build/test_fread_ftell.d
+gcc -E  src/test_fflush.c -MM -MT _build/test_fflush.o >_build/test_fflush.d
+gcc -E  src/test_fwrite_huge_chunked.c -MM -MT _build/test_fwrite_huge_chunked.o >_build/test_fwrite_huge_chunked.d
+gcc -E  src/test_fwrite_large_chunked.c -MM -MT _build/test_fwrite_large_chunked.o >_build/test_fwrite_large_chunked.d
+gcc -E  src/test_fwrite_huge.c -MM -MT _build/test_fwrite_huge.o >_build/test_fwrite_huge.d
+gcc -E  src/test_fwrite_large.c -MM -MT _build/test_fwrite_large.o >_build/test_fwrite_large.d
+gcc -E  src/test_fwrite_small.c -MM -MT _build/test_fwrite_small.o >_build/test_fwrite_small.d
+gcc -E  src/test_fputc_large.c -MM -MT _build/test_fputc_large.o >_build/test_fputc_large.d
+gcc -E  src/test_fputc.c -MM -MT _build/test_fputc.o >_build/test_fputc.d
+gcc -E  src/test_fread_huge_chunked.c -MM -MT _build/test_fread_huge_chunked.o >_build/test_fread_huge_chunked.d
+gcc -E  src/test_fread_large_chunked.c -MM -MT _build/test_fread_large_chunked.o >_build/test_fread_large_chunked.d
+gcc -E  src/test_fread_huge.c -MM -MT _build/test_fread_huge.o >_build/test_fread_huge.d
+gcc -E  src/test_fread_large.c -MM -MT _build/test_fread_large.o >_build/test_fread_large.d
+gcc -E  src/test_fread_small.c -MM -MT _build/test_fread_small.o >_build/test_fread_small.d
+gcc -E  src/test_fgetc_large.c -MM -MT _build/test_fgetc_large.o >_build/test_fgetc_large.d
+gcc -E  src/test_fgetc.c -MM -MT _build/test_fgetc.o >_build/test_fgetc.d
+gcc -E  src/test_fopen_args.c -MM -MT _build/test_fopen_args.o >_build/test_fopen_args.d
+gcc -Wall -g -O0 -c -o _build/test_fopen_args.o src/test_fopen_args.c
+gcc -Wall -g -O0 -c -o _build/hooks.o src/hooks.c
+gcc -Wall -g -O0 -c -o _build/test_util.o src/test_util.c
+gcc -L.. -o bin/test_fopen_args _build/test_fopen_args.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fgetc.o src/test_fgetc.c
+gcc -L.. -o bin/test_fgetc _build/test_fgetc.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fgetc_large.o src/test_fgetc_large.c
+gcc -L.. -o bin/test_fgetc_large _build/test_fgetc_large.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fread_small.o src/test_fread_small.c
+gcc -L.. -o bin/test_fread_small _build/test_fread_small.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fread_large.o src/test_fread_large.c
+gcc -L.. -o bin/test_fread_large _build/test_fread_large.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fread_huge.o src/test_fread_huge.c
+gcc -L.. -o bin/test_fread_huge _build/test_fread_huge.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fread_large_chunked.o src/test_fread_large_chunked.c
+gcc -L.. -o bin/test_fread_large_chunked _build/test_fread_large_chunked.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fread_huge_chunked.o src/test_fread_huge_chunked.c
+gcc -L.. -o bin/test_fread_huge_chunked _build/test_fread_huge_chunked.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fputc.o src/test_fputc.c
+gcc -L.. -o bin/test_fputc _build/test_fputc.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fputc_large.o src/test_fputc_large.c
+gcc -L.. -o bin/test_fputc_large _build/test_fputc_large.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fwrite_small.o src/test_fwrite_small.c
+gcc -L.. -o bin/test_fwrite_small _build/test_fwrite_small.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fwrite_large.o src/test_fwrite_large.c
+gcc -L.. -o bin/test_fwrite_large _build/test_fwrite_large.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fwrite_huge.o src/test_fwrite_huge.c
+gcc -L.. -o bin/test_fwrite_huge _build/test_fwrite_huge.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fwrite_large_chunked.o src/test_fwrite_large_chunked.c
+gcc -L.. -o bin/test_fwrite_large_chunked _build/test_fwrite_large_chunked.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fwrite_huge_chunked.o src/test_fwrite_huge_chunked.c
+gcc -L.. -o bin/test_fwrite_huge_chunked _build/test_fwrite_huge_chunked.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fflush.o src/test_fflush.c
+gcc -L.. -o bin/test_fflush _build/test_fflush.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fread_ftell.o src/test_fread_ftell.c
+gcc -L.. -o bin/test_fread_ftell _build/test_fread_ftell.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fwrite_ftell.o src/test_fwrite_ftell.c
+gcc -L.. -o bin/test_fwrite_ftell _build/test_fwrite_ftell.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fseek_ftell.o src/test_fseek_ftell.c
+gcc -L.. -o bin/test_fseek_ftell _build/test_fseek_ftell.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fseek_fread.o src/test_fseek_fread.c
+gcc -L.. -o bin/test_fseek_fread _build/test_fseek_fread.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fseek_fwrite.o src/test_fseek_fwrite.c
+gcc -L.. -o bin/test_fseek_fwrite _build/test_fseek_fwrite.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fread_fwrite.o src/test_fread_fwrite.c
+gcc -L.. -o bin/test_fread_fwrite _build/test_fread_fwrite.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fwrite_fread.o src/test_fwrite_fread.c
+gcc -L.. -o bin/test_fwrite_fread _build/test_fwrite_fread.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_feof_fgetc.o src/test_feof_fgetc.c
+gcc -L.. -o bin/test_feof_fgetc _build/test_feof_fgetc.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_feof_fread.o src/test_feof_fread.c
+gcc -L.. -o bin/test_feof_fread _build/test_feof_fread.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_append.o src/test_append.c
+gcc -L.. -o bin/test_append _build/test_append.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_append_read.o src/test_append_read.c
+gcc -L.. -o bin/test_append_read _build/test_append_read.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_ferror_read_small.o src/test_ferror_read_small.c
+gcc -L.. -o bin/test_ferror_read_small _build/test_ferror_read_small.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_ferror_read_large.o src/test_ferror_read_large.c
+gcc -L.. -o bin/test_ferror_read_large _build/test_ferror_read_large.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_ferror_write_small.o src/test_ferror_write_small.c
+gcc -L.. -o bin/test_ferror_write_small _build/test_ferror_write_small.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_ferror_write_large.o src/test_ferror_write_large.c
+gcc -L.. -o bin/test_ferror_write_large _build/test_ferror_write_large.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_popen_read.o src/test_popen_read.c
+gcc -L.. -o bin/test_popen_read _build/test_popen_read.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_popen_write.o src/test_popen_write.c
+gcc -L.. -o bin/test_popen_write _build/test_popen_write.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_ferror_fclose.o src/test_ferror_fclose.c
+gcc -L.. -o bin/test_ferror_fclose _build/test_ferror_fclose.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_ferror_fseek.o src/test_ferror_fseek.c
+gcc -L.. -o bin/test_ferror_fseek _build/test_ferror_fseek.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fread_huge_random.o src/test_fread_huge_random.c
+gcc -L.. -o bin/test_fread_huge_random _build/test_fread_huge_random.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_fwrite_huge_random.o src/test_fwrite_huge_random.c
+gcc -L.. -o bin/test_fwrite_huge_random _build/test_fwrite_huge_random.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_perror_fork.o src/test_perror_fork.c
+gcc -L.. -o bin/test_perror_fork _build/test_perror_fork.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+gcc -Wall -g -O0 -c -o _build/test_perror_wait.o src/test_perror_wait.c
+gcc -L.. -o bin/test_perror_wait _build/test_perror_wait.o _build/hooks.o _build/test_util.o -lso_stdio -ldl
+./so_stdio.c:78: WARNING:BRACES: braces {} are not necessary for single statement blocks
+./so_stdio.c:30: ERROR:CODE_INDENT: code indent should use tabs where possible
+./so_stdio.c:12: WARNING:LEADING_SPACE: please, no spaces at the start of a line
+./so_stdio.c:27: WARNING:LINE_SPACING: Missing a blank line after declarations
+./so_stdio.c:24: ERROR:OPEN_BRACE: open brace '{' following function definitions go on the next line
+./so_stdio.c:30: WARNING:SPACE_BEFORE_TAB: please, no space before tabs
+./so_stdio.c:29: ERROR:SPACING: space required before the open parenthesis '('
+./so_stdio.c:29: WARNING:SUSPECT_CODE_INDENT: suspect code indent for conditional statements (4, 16)
+./so_stdio.c:30: ERROR:TRAILING_WHITESPACE: trailing whitespace
+00) Sources check...........................................failed  [ 0/95]
+
+                                                            Total:  [00/95]

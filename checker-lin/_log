@@ -1,0 +1,32 @@
+==16553== Memcheck, a memory error detector
+==16553== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==16553== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==16553== Command: _test/bin/test_fgetc ./_test/work/test_2
+==16553== Parent PID: 16549
+==16553== 
+==16553== Conditional jump or move depends on uninitialised value(s)
+==16553==    at 0x483EF58: strlen (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==16553==    by 0x48E65B3: puts (ioputs.c:35)
+==16553==    by 0x484B4B1: so_fgetc (so_stdio.c:93)
+==16553==    by 0x109667: main (test_fgetc.c:67)
+==16553== 
+==16553== 
+==16553== HEAP SUMMARY:
+==16553==     in use at exit: 4,112 bytes in 1 blocks
+==16553==   total heap usage: 7 allocs, 6 frees, 11,256 bytes allocated
+==16553== 
+==16553== 4,112 bytes in 1 blocks are still reachable in loss record 1 of 1
+==16553==    at 0x483B7F3: malloc (in /usr/lib/x86_64-linux-gnu/valgrind/vgpreload_memcheck-amd64-linux.so)
+==16553==    by 0x484B21D: so_fopen (so_stdio.c:22)
+==16553==    by 0x1095FB: main (test_fgetc.c:59)
+==16553== 
+==16553== LEAK SUMMARY:
+==16553==    definitely lost: 0 bytes in 0 blocks
+==16553==    indirectly lost: 0 bytes in 0 blocks
+==16553==      possibly lost: 0 bytes in 0 blocks
+==16553==    still reachable: 4,112 bytes in 1 blocks
+==16553==         suppressed: 0 bytes in 0 blocks
+==16553== 
+==16553== Use --track-origins=yes to see where uninitialised values come from
+==16553== For lists of detected and suppressed errors, rerun with: -s
+==16553== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
