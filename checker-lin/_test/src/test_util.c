@@ -75,6 +75,9 @@ int compare_file(char *fname, unsigned char *buf, int len)
 		return 0;
 
 	if (len != flen) {
+		// printf("aici\n");
+		// printf("len %d\n", len);
+		// printf("flen %d\n", flen);
 		free(fdata);
 		return 0;
 	}
